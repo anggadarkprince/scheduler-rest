@@ -1,0 +1,113 @@
+Time : 15:59:31
+SQLSTATE[HY093]: Invalid parameter number
+Raw SQL : SELECT 
+				cpf_bank.bnk_id,
+				cpf_bank.bnk_bank,
+				cpf_bank.bnk_description, 
+				IFNULL(T1.bnk_amount,0) AS bnk_income, 
+				IFNULL(T2.bnk_amount,0) AS bnk_expenses,
+				IFNULL(IFNULL(T1.bnk_amount,0)-IFNULL(T2.bnk_amount,0),0) AS bnk_balance 
+			FROM cpf_bank 
+			LEFT JOIN (
+				SELECT 
+					bnk_id, 
+					bnk_bank, 
+					IFNULL(SUM(trn_amount), 0) as bnk_amount 
+				FROM cpf_bank 
+				LEFT JOIN cpf_transaction 
+					ON bnk_id = trn_bank 
+				WHERE trn_type = 1 
+				AND bnk_user=:bnk_user
+				GROUP BY bnk_id
+			)T1 
+				ON cpf_bank.bnk_id=T1.bnk_id 
+			
+			LEFT JOIN (
+				SELECT 
+					bnk_id, 
+					bnk_bank, 
+					IFNULL(SUM(trn_amount), 0) as bnk_amount 
+				FROM cpf_bank 
+				LEFT JOIN cpf_transaction 
+					ON bnk_id = trn_bank 
+				WHERE trn_type = 2 
+				AND bnk_user=:bnk_user
+				GROUP BY bnk_id
+			)T2 
+				ON T1.bnk_id=T2.bnk_id
+
+Time : 07:39:17
+SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`cloudpersonalfinancing`.`cpf_bank`, CONSTRAINT `fk_cpf_bank_cpf_user1` FOREIGN KEY (`bnk_user`) REFERENCES `cpf_user` (`usr_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Raw SQL : DELETE FROM cpf_user WHERE usr_id= :usr_id LIMIT 1
+
+Time : 07:38:24
+SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`cloudpersonalfinancing`.`cpf_bank`, CONSTRAINT `fk_cpf_bank_cpf_user1` FOREIGN KEY (`bnk_user`) REFERENCES `cpf_user` (`usr_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Raw SQL : DELETE FROM cpf_user WHERE usr_id= :usr_id LIMIT 1
+
+Time : 07:36:13
+SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`cloudpersonalfinancing`.`cpf_bank`, CONSTRAINT `fk_cpf_bank_cpf_user1` FOREIGN KEY (`bnk_user`) REFERENCES `cpf_user` (`usr_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Raw SQL : DELETE FROM cpf_user WHERE usr_id= :usr_id LIMIT 1
+
+Time : 00:56:57
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : 
+            SELECT COUNT(*) AS TOTAL
+            FROM cpf_bank
+            WHERE bnk_user = :bnk_user
+        
+
+Time : 00:56:31
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : 
+            SELECT COUNT(*) AS TOTAL
+            FROM cpf_bank
+            WHERE bnk_user = :bnk_user
+        
+
+Time : 00:54:40
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : 
+            SELECT COUNT(*) AS TOTAL
+            FROM cpf_bank
+            WHERE bnk_user = :bnk_user
+        
+
+Time : 00:41:06
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : 
+            SELECT COUNT(*) AS TOTAL
+            FROM cpf_bank
+            WHERE bnk_user = :bnk_user
+        
+
+Time : 00:40:48
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : 
+            SELECT COUNT(*) AS TOTAL
+            FROM cpf_bank
+            WHERE bnk_user = :bnk_user
+        
+
+Time : 00:40:32
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : 
+            SELECT COUNT(*) AS TOTAL
+            FROM cpf_bank
+            WHERE bnk_user = :bnk_user
+        
+
+Time : 00:37:27
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : 
+            SELECT COUNT(*) AS TOTAL
+            FROM cpf_bank
+            WHERE bnk_user = :bnk_user
+        
+
+Time : 00:30:12
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : 
+            SELECT COUNT(*) AS TOTAL
+            FROM cpf_bank
+            WHERE bnk_user = :bnk_user
+        

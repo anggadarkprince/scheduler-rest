@@ -1,0 +1,280 @@
+Time : 11:34:24
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : 
+            SELECT
+              IFNULL(SUM(trn_amount),0) AS expense
+            FROM cpf_transaction
+            WHERE trn_type = 2
+            AND trn_bank = :trn_bank
+            AND YEAR(trn_date) = :trn_year
+            AND MONTH(trn_date) = :trn_month
+            AND trn_user = :trn_user
+        
+
+Time : 11:32:10
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : 
+            SELECT
+              IFNULL(SUM(trn_amount),0) AS expense
+            FROM cpf_transaction
+            WHERE trn_type = 2
+            AND trn_bank = :trn_bank
+            AND YEAR(trn_date) = :trn_year
+            AND MONTH(trn_date) = :trn_month
+            AND trn_user = :trn_user
+        
+
+Time : 11:31:27
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : 
+            SELECT
+              IFNULL(SUM(trn_amount),0) AS expense
+            FROM cpf_transaction
+            WHERE trn_type = 2
+            AND trn_bank = :trn_bank
+            AND YEAR(trn_date) = :trn_year
+            AND MONTH(trn_date) = :trn_month
+            AND trn_user = :trn_user
+        
+
+Time : 11:31:27
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : 
+            SELECT
+              IFNULL(SUM(trn_amount),0) AS expense
+            FROM cpf_transaction
+            WHERE trn_type = 2
+            AND trn_bank = :trn_bank
+            AND YEAR(trn_date) = :trn_year
+            AND MONTH(trn_date) = :trn_month
+            AND trn_user = :trn_user
+        
+
+Time : 11:31:27
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : 
+            SELECT
+              IFNULL(SUM(trn_amount),0) AS expense
+            FROM cpf_transaction
+            WHERE trn_type = 2
+            AND trn_bank = :trn_bank
+            AND YEAR(trn_date) = :trn_year
+            AND MONTH(trn_date) = :trn_month
+            AND trn_user = :trn_user
+        
+
+Time : 11:31:27
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : 
+            SELECT
+              IFNULL(SUM(trn_amount),0) AS expense
+            FROM cpf_transaction
+            WHERE trn_type = 2
+            AND trn_bank = :trn_bank
+            AND YEAR(trn_date) = :trn_year
+            AND MONTH(trn_date) = :trn_month
+            AND trn_user = :trn_user
+        
+
+Time : 11:30:33
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : 
+            SELECT
+              IFNULL(SUM(trn_amount),0) AS expense
+            FROM cpf_transaction
+            WHERE trn_type = 2
+            AND trn_bank = :trn_bank
+            AND YEAR(trn_date) = :trn_year
+            AND MONTH(trn_date) = :trn_month
+            AND trn_user = :trn_user
+        
+
+Time : 11:30:33
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : 
+            SELECT
+              IFNULL(SUM(trn_amount),0) AS expense
+            FROM cpf_transaction
+            WHERE trn_type = 2
+            AND trn_bank = :trn_bank
+            AND YEAR(trn_date) = :trn_year
+            AND MONTH(trn_date) = :trn_month
+            AND trn_user = :trn_user
+        
+
+Time : 11:30:33
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : 
+            SELECT
+              IFNULL(SUM(trn_amount),0) AS expense
+            FROM cpf_transaction
+            WHERE trn_type = 2
+            AND trn_bank = :trn_bank
+            AND YEAR(trn_date) = :trn_year
+            AND MONTH(trn_date) = :trn_month
+            AND trn_user = :trn_user
+        
+
+Time : 11:30:33
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : 
+            SELECT
+              IFNULL(SUM(trn_amount),0) AS expense
+            FROM cpf_transaction
+            WHERE trn_type = 2
+            AND trn_bank = :trn_bank
+            AND YEAR(trn_date) = :trn_year
+            AND MONTH(trn_date) = :trn_month
+            AND trn_user = :trn_user
+        
+
+Time : 11:29:45
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : 
+            SELECT
+              IFNULL(SUM(trn_amount),0) AS expense
+            FROM cpf_transaction
+            WHERE trn_type = 2
+            AND trn_bank = :trn_bank
+            AND YEAR(trn_date) = :trn_year
+            AND MONTH(trn_date) = :trn_month
+            AND trn_user = :trn_user
+        
+
+Time : 11:29:45
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : 
+            SELECT
+              IFNULL(SUM(trn_amount),0) AS expense
+            FROM cpf_transaction
+            WHERE trn_type = 2
+            AND trn_bank = :trn_bank
+            AND YEAR(trn_date) = :trn_year
+            AND MONTH(trn_date) = :trn_month
+            AND trn_user = :trn_user
+        
+
+Time : 11:29:45
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : 
+            SELECT
+              IFNULL(SUM(trn_amount),0) AS expense
+            FROM cpf_transaction
+            WHERE trn_type = 2
+            AND trn_bank = :trn_bank
+            AND YEAR(trn_date) = :trn_year
+            AND MONTH(trn_date) = :trn_month
+            AND trn_user = :trn_user
+        
+
+Time : 11:29:44
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : 
+            SELECT
+              IFNULL(SUM(trn_amount),0) AS expense
+            FROM cpf_transaction
+            WHERE trn_type = 2
+            AND trn_bank = :trn_bank
+            AND YEAR(trn_date) = :trn_year
+            AND MONTH(trn_date) = :trn_month
+            AND trn_user = :trn_user
+        
+
+Time : 07:26:19
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM cpf_transaction            
+            WHERE trn_user = ? 
+			AND trn_ca' at line 2
+Raw SQL : SELECT t*
+            FROM cpf_transaction            
+            WHERE trn_user = :trn_user 
+			AND trn_category = :trn_category
+
+Time : 07:25:47
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM cpf_transaction            
+            WHERE trn_user = ?
+			AND trn_cat' at line 2
+Raw SQL : SELECT t*
+            FROM cpf_transaction            
+            WHERE trn_user = :trn_user
+			AND trn_category = :trn_category
+
+Time : 07:24:56
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM cpf_transaction            
+            WHERE trn_user = ?
+			AND trn_cat' at line 2
+Raw SQL : SELECT t*
+            FROM cpf_transaction            
+            WHERE trn_user = :trn_user
+			AND trn_category = :trn_category
+
+Time : 07:24:54
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM cpf_transaction            
+            WHERE trn_user = ?
+			AND trn_cat' at line 2
+Raw SQL : SELECT t*
+            FROM cpf_transaction            
+            WHERE trn_user = :trn_user
+			AND trn_category = :trn_category
+
+Time : 07:24:52
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM cpf_transaction            
+            WHERE trn_user = ?
+			AND trn_cat' at line 2
+Raw SQL : SELECT t*
+            FROM cpf_transaction            
+            WHERE trn_user = :trn_user
+			AND trn_category = :trn_category
+
+Time : 07:24:50
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM cpf_transaction            
+            WHERE trn_user = ?
+			AND trn_cat' at line 2
+Raw SQL : SELECT t*
+            FROM cpf_transaction            
+            WHERE trn_user = :trn_user
+			AND trn_category = :trn_category
+
+Time : 07:24:47
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM cpf_transaction            
+            WHERE trn_user = ?
+			AND trn_cat' at line 2
+Raw SQL : SELECT t*
+            FROM cpf_transaction            
+            WHERE trn_user = :trn_user
+			AND trn_category = :trn_category
+
+Time : 05:10:27
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cloudpersonalfinancing`.`cpf_transaction`, CONSTRAINT `fk_cpf_transaction_cpf_user` FOREIGN KEY (`trn_user`) REFERENCES `cpf_user` (`usr_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Raw SQL : UPDATE cpf_transaction SET trn_date = :trn_date,trn_title = :trn_title,trn_description = :trn_description,trn_amount = :trn_amount,trn_user = :trn_user,trn_category = :trn_category,trn_bank = :trn_bank WHERE trn_id= :trn_id
+
+Time : 04:55:30
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cloudpersonalfinancing`.`cpf_transaction`, CONSTRAINT `fk_cpf_transaction_cpf_user` FOREIGN KEY (`trn_user`) REFERENCES `cpf_user` (`usr_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Raw SQL : UPDATE cpf_transaction SET trn_date = :trn_date,trn_title = :trn_title,trn_description = :trn_description,trn_amount = :trn_amount,trn_user = :trn_user,trn_category = :trn_category,trn_bank = :trn_bank WHERE trn_id= :trn_id
+
+Time : 04:51:12
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cloudpersonalfinancing`.`cpf_transaction`, CONSTRAINT `fk_cpf_transaction_cpf_bank1` FOREIGN KEY (`trn_bank`) REFERENCES `cpf_bank` (`bnk_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Raw SQL : UPDATE cpf_transaction SET trn_date = :trn_date,trn_title = :trn_title,trn_description = :trn_description,trn_amount = :trn_amount,trn_user = :trn_user,trn_category = :trn_category,trn_bank = :trn_bank WHERE trn_id= :trn_id
+
+Time : 04:48:51
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cloudpersonalfinancing`.`cpf_transaction`, CONSTRAINT `fk_cpf_transaction_cpf_user` FOREIGN KEY (`trn_user`) REFERENCES `cpf_user` (`usr_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Raw SQL : UPDATE cpf_transaction SET trn_date = :trn_date,trn_title = :trn_title,trn_description = :trn_description,trn_amount = :trn_amount,trn_user = :trn_user,trn_category = :trn_category,trn_bank = :trn_bank WHERE trn_id= :trn_id
+
+Time : 04:30:03
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cloudpersonalfinancing`.`cpf_transaction`, CONSTRAINT `fk_cpf_transaction_cpf_user` FOREIGN KEY (`trn_user`) REFERENCES `cpf_user` (`usr_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Raw SQL : UPDATE cpf_transaction SET trn_date = :trn_date,trn_title = :trn_title,trn_description = :trn_description,trn_amount = :trn_amount,trn_user = :trn_user,trn_category = :trn_category,trn_bank = :trn_bank WHERE trn_id= :trn_id
+
+Time : 04:23:57
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cloudpersonalfinancing`.`cpf_transaction`, CONSTRAINT `fk_cpf_transaction_cpf_user` FOREIGN KEY (`trn_user`) REFERENCES `cpf_user` (`usr_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Raw SQL : UPDATE cpf_transaction SET trn_date = :trn_date,trn_title = :trn_title,trn_description = :trn_description,trn_amount = :trn_amount,trn_user = :trn_user,trn_category = :trn_category,trn_bank = :trn_bank WHERE trn_id= :trn_id
+
+Time : 02:17:19
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cloudpersonalfinancing`.`cpf_transaction`, CONSTRAINT `fk_cpf_transaction_cfp_type1` FOREIGN KEY (`trn_type`) REFERENCES `cpf_type` (`typ_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Raw SQL : INSERT INTO cpf_transaction (trn_date,trn_title,trn_description,trn_amount,trn_user,trn_type,trn_category,trn_bank) VALUES (:trn_date,:trn_title,:trn_description,:trn_amount,:trn_user,:trn_type,:trn_category,:trn_bank)
+
+Time : 02:16:05
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cloudpersonalfinancing`.`cpf_transaction`, CONSTRAINT `fk_cpf_transaction_cpf_user` FOREIGN KEY (`trn_user`) REFERENCES `cpf_user` (`usr_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Raw SQL : INSERT INTO cpf_transaction (trn_date,trn_title,trn_description,trn_amount,trn_user,trn_type,trn_category,trn_bank) VALUES (:trn_date,:trn_title,:trn_description,:trn_amount,:trn_user,:trn_type,:trn_category,:trn_bank)
+
+Time : 02:13:32
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cloudpersonalfinancing`.`cpf_transaction`, CONSTRAINT `fk_cpf_transaction_cpf_user` FOREIGN KEY (`trn_user`) REFERENCES `cpf_user` (`usr_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Raw SQL : INSERT INTO cpf_transaction (trn_date,trn_title,trn_description,trn_amount,trn_user,trn_type,trn_category,trn_bank) VALUES (:trn_date,:trn_title,:trn_description,:trn_amount,:trn_user,:trn_type,:trn_category,:trn_bank)
