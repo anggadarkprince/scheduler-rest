@@ -36,10 +36,66 @@ class Schedule extends BaseModel
         return $result["TOTAL"];
     }
 
+    public function getTotalIncoming($user)
+    {
+        # get count schedule total
+        $this->db->bind("user_id", $user);
+        $result = $this->db->row("
+            SELECT COUNT(*) AS TOTAL
+            FROM schedules
+            WHERE user_id = :user_id
+            AND date >= CURRENT_DATE
+        ");
+        return $result["TOTAL"];
+    }
+
+    public function getIncomingSchedule($user)
+    {
+        $this->db->bind("user_id", $user);
+        $result = $this->db->query("
+            SELECT *
+            FROM schedules
+            WHERE user_id = :user_id
+            AND date >= CURRENT_DATE
+            ORDER BY date, time DESC
+        ");
+        return $result;    }
+
+    public function getTodaySchedule($user)
+    {
+        $this->db->bind("user_id", $user);
+        $result = $this->db->query("
+            SELECT *
+            FROM schedules
+            WHERE user_id = :user_id
+            AND date = CURRENT_DATE
+            ORDER BY date, time DESC
+        ");
+        return $result;
+    }
+
+    public function getTomorrowSchedule($user)
+    {
+        $this->db->bind("user_id", $user);
+        $result = $this->db->query("
+            SELECT *
+            FROM schedules
+            WHERE user_id = :user_id
+            AND date = CURRENT_DATE + 1
+            ORDER BY date, time DESC
+        ");
+        return $result;
+    }
+
     public function getSchedule($user)
     {
         $this->db->bind("user_id", $user);
-        $result = $this->db->query("SELECT * FROM schedules WHERE user_id = :user_id");
+        $result = $this->db->query("
+          SELECT *
+          FROM schedules
+          WHERE user_id = :user_id
+          ORDER BY date, time DESC
+        ");
         return $result;
     }
 

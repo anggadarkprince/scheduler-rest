@@ -10,6 +10,7 @@ namespace controllers;
 
 
 use lib\MVC\Controller\BaseController;
+use models\Note;
 use models\User;
 use models\Utils;
 
@@ -28,6 +29,34 @@ class Schedule extends BaseController
             # retrieve note data from database and send the result
             $user_id = $_POST['user_id'];
             $result = array('status' => 'success', 'schedules' => $this->schedule->getSchedule($user_id));
+            Utils::prettyPrint(json_encode($result, JSON_PRETTY_PRINT));
+        } else {
+            # status will be restrict when token does not exist in database record
+            $result = array('status' => 'restrict');
+            Utils::prettyPrint(json_encode($result, JSON_PRETTY_PRINT));
+        }
+    }
+
+    public function summary()
+    {
+        # check token to make sure request from User that exist in database record
+        if (true || User::isValidToken($_POST['token'])) {
+            # create new object from schedule model
+            $this->schedule = new \models\Schedule();
+
+            $note = new Note();
+
+            # retrieve note data from database and send the result
+            $user_id = $_POST['user_id'];
+            $result = array(
+                'status' => 'success',
+                'total_schedule' => $this->schedule->getTotalSchedule($user_id),
+                'total_incoming' => $this->schedule->getTotalIncoming($user_id),
+                'total_note' => $note->getTotalNote($user_id),
+                'incoming' => $this->schedule->getIncomingSchedule($user_id),
+                'today' => $this->schedule->getTodaySchedule($user_id),
+                'tomorrow' => $this->schedule->getTomorrowSchedule($user_id)
+            );
             Utils::prettyPrint(json_encode($result, JSON_PRETTY_PRINT));
         } else {
             # status will be restrict when token does not exist ini database record
@@ -133,7 +162,7 @@ class Schedule extends BaseController
             $this->schedule = new \models\Schedule();
 
             # delete note by id
-            $id = 8;//$_POST['id'];
+            $id = $_POST['id'];
             if ($this->schedule->deleteSchedule($id)) {
                 # note data has deleted then success
                 $result = array('status' => 'success');
@@ -149,4 +178,4 @@ class Schedule extends BaseController
             Utils::prettyPrint(json_encode($result, JSON_PRETTY_PRINT));
         }
     }
-} 
+}

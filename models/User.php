@@ -68,6 +68,8 @@ class User extends BaseModel
 
     public function logout()
     {
+        session_start();
+
         unset($_SESSION['sch_id']);
         unset($_SESSION['sch_token']);
         unset($_SESSION['sch_username']);
@@ -128,7 +130,6 @@ class User extends BaseModel
         $this->user->name = $user['name'];
         $this->user->work = $user['work'];
         $this->user->about = $user['about'];
-        $this->user->reminder = $user['reminder'];
 
         if (isset($user['password'])) {
             $this->user->password = md5($user['password']);
@@ -143,4 +144,4 @@ class User extends BaseModel
         return $this->user->delete();
     }
 
-} 
+}

@@ -32,6 +32,7 @@ class Note extends BaseModel
             SELECT COUNT(*) AS TOTAL
             FROM notes
             WHERE user_id = :user_id
+            ORDER BY created_at DESC
         ");
         return $result["TOTAL"];
     }

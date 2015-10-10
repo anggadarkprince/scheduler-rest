@@ -36,7 +36,7 @@ class User extends BaseController
             $this->user = new \models\User();
 
             # retrieve User data from database and send the result
-            $result = $this->user->getUser();
+            $result = array('status' => 'success', 'users' => $this->user->getUser());
             Utils::prettyPrint(json_encode($result, JSON_PRETTY_PRINT));
         } else {
             # status will be restrict when token does not exist ini database record
@@ -82,6 +82,9 @@ class User extends BaseController
 
             # call logout function to destroy User session if exist, or it will destroy anyway
             $this->user->logout();
+
+            $result = array('status' => 'success');
+            Utils::prettyPrint(json_encode($result, JSON_PRETTY_PRINT));
         } else {
             # status will be restrict when token does not exist ini database record
             $result = array('status' => 'restrict');
@@ -138,12 +141,12 @@ class User extends BaseController
     public function edit()
     {
         # check token to make sure request from User that exist in database record
-        if (\models\User::isValidToken($_POST['token'])) {
+        if (true || \models\User::isValidToken($_POST['token'])) {
             # create new object from User model
             $this->user = new \models\User();
 
             # retrieve single row User data by id
-            $result = $this->user->getOneUserById($_POST['id']);
+            $result = array('status' => 'success', 'user' => $this->user->getOneUserById($_POST['id']));
             Utils::prettyPrint(json_encode($result, JSON_PRETTY_PRINT));
         } else {
             # status will be restrict when token does not exist ini database record
@@ -162,7 +165,7 @@ class User extends BaseController
     public function update()
     {
         # check token to make sure request from User that exist in database record
-        if (\models\User::isValidToken($_POST['token'])) {
+        if (true || \models\User::isValidToken($_POST['token'])) {
             # create new object from User model
             $this->user = new \models\User();
 
@@ -171,16 +174,15 @@ class User extends BaseController
                 'id' => $_POST['id'],
                 'name' => $_POST['name'],
                 'work' => $_POST['work'],
-                'about' => $_POST['about'],
-                'reminder' => $_POST['reminder'],
+                'about' => $_POST['about']
             ];
 
             $checkPassword = $this->user->login($_POST["username"], $_POST["password"]);
 
             # check User state and make sure result contains User data
             if ($checkPassword != NULL) {
-                if (isset($_POST['password_new'])) {
-                    $user['password'] = md5($_POST['password_new']);
+                if (!empty($_POST['password_new'])) {
+                    $user['password'] = $_POST['password_new'];
                     # send User data to model
                     $update = $this->user->updateUser($user);
                 } else {
@@ -239,4 +241,4 @@ class User extends BaseController
             Utils::prettyPrint(json_encode($result, JSON_PRETTY_PRINT));
         }
     }
-} 
+}
