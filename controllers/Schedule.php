@@ -47,7 +47,7 @@ class Schedule extends BaseController
             $note = new Note();
 
             # retrieve note data from database and send the result
-            $user_id = $_POST['user_id'];
+            $user_id = 1;//$_POST['user_id'];
             $result = array(
                 'status' => 'success',
                 'total_schedule' => $this->schedule->getTotalSchedule($user_id),

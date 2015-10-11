@@ -57,7 +57,7 @@ class Schedule extends BaseModel
             FROM schedules
             WHERE user_id = :user_id
             AND date >= CURRENT_DATE
-            ORDER BY date, time DESC
+            ORDER BY date DESC, time DESC
         ");
         return $result;    }
 
@@ -69,7 +69,7 @@ class Schedule extends BaseModel
             FROM schedules
             WHERE user_id = :user_id
             AND date = CURRENT_DATE
-            ORDER BY date, time DESC
+            ORDER BY date DESC, time DESC
         ");
         return $result;
     }
@@ -82,7 +82,7 @@ class Schedule extends BaseModel
             FROM schedules
             WHERE user_id = :user_id
             AND date = CURRENT_DATE + 1
-            ORDER BY date, time DESC
+            ORDER BY date DESC, time DESC
         ");
         return $result;
     }
@@ -94,7 +94,7 @@ class Schedule extends BaseModel
           SELECT *
           FROM schedules
           WHERE user_id = :user_id
-          ORDER BY date, time DESC
+          ORDER BY date DESC, time DESC
         ");
         return $result;
     }

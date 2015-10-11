@@ -1,7 +1,0 @@
-Time : 10:27:37
-SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cloudpersonalfinancing`.`cpf_category`, CONSTRAINT `fk_cpf_category_cpf_user1` FOREIGN KEY (`ctg_user`) REFERENCES `cpf_user` (`usr_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
-Raw SQL : INSERT INTO cpf_category (ctg_user,ctg_category,ctg_description) VALUES (:ctg_user,:ctg_category,:ctg_description)
-
-Time : 10:27:26
-SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cloudpersonalfinancing`.`cpf_category`, CONSTRAINT `fk_cpf_category_cpf_user1` FOREIGN KEY (`ctg_user`) REFERENCES `cpf_user` (`usr_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
-Raw SQL : INSERT INTO cpf_category (ctg_user,ctg_category,ctg_description) VALUES (:ctg_user,:ctg_category,:ctg_description)

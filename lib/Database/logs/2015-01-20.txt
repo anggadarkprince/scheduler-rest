@@ -1,7 +1,0 @@
-Time : 03:03:31
-SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'angga_sgsnitsfil@yahoo.com' for key 'ply_email_UNIQUE'
-Raw SQL : INSERT INTO user (ply_key,ply_name,ply_email,ply_password,ply_state,ply_avatar) VALUES (:ply_key,:ply_name,:ply_email,:ply_password,:ply_state,:ply_avatar)
-
-Time : 03:02:51
-SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'angga_sgsnitsfil@yahoo.com' for key 'ply_email_UNIQUE'
-Raw SQL : INSERT INTO user (ply_key,ply_name,ply_email,ply_password,ply_state,ply_avatar) VALUES (:ply_key,:ply_name,:ply_email,:ply_password,:ply_state,:ply_avatar)
