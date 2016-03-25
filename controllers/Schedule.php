@@ -65,6 +65,75 @@ class Schedule extends BaseController
         }
     }
 
+    public function incoming()
+    {
+      # check token to make sure request from User that exist in database record
+      if (true || User::isValidToken($_POST['token'])) {
+          # create new object from schedule model
+          $this->schedule = new \models\Schedule();
+
+          $note = new Note();
+
+          # retrieve note data from database and send the result
+          $user_id = 1;//$_POST['user_id'];
+          $result = array(
+              'status' => 'success',
+              'incoming' => $this->schedule->getIncomingSchedule($user_id)
+          );
+          Utils::prettyPrint(json_encode($result, JSON_PRETTY_PRINT));
+      } else {
+          # status will be restrict when token does not exist ini database record
+          $result = array('status' => 'restrict');
+          Utils::prettyPrint(json_encode($result, JSON_PRETTY_PRINT));
+      }
+    }
+
+    public function today()
+    {
+      # check token to make sure request from User that exist in database record
+      if (true || User::isValidToken($_POST['token'])) {
+          # create new object from schedule model
+          $this->schedule = new \models\Schedule();
+
+          $note = new Note();
+
+          # retrieve note data from database and send the result
+          $user_id = 1;//$_POST['user_id'];
+          $result = array(
+              'status' => 'success',
+              'today' => $this->schedule->getTodaySchedule($user_id)
+          );
+          Utils::prettyPrint(json_encode($result, JSON_PRETTY_PRINT));
+      } else {
+          # status will be restrict when token does not exist ini database record
+          $result = array('status' => 'restrict');
+          Utils::prettyPrint(json_encode($result, JSON_PRETTY_PRINT));
+      }
+    }
+
+    public function tomorrow()
+    {
+      # check token to make sure request from User that exist in database record
+      if (true || User::isValidToken($_POST['token'])) {
+          # create new object from schedule model
+          $this->schedule = new \models\Schedule();
+
+          $note = new Note();
+
+          # retrieve note data from database and send the result
+          $user_id = 1;//$_POST['user_id'];
+          $result = array(
+              'status' => 'success',
+              'tomorrow' => $this->schedule->getTomorrowSchedule($user_id)
+          );
+          Utils::prettyPrint(json_encode($result, JSON_PRETTY_PRINT));
+      } else {
+          # status will be restrict when token does not exist ini database record
+          $result = array('status' => 'restrict');
+          Utils::prettyPrint(json_encode($result, JSON_PRETTY_PRINT));
+      }
+    }
+
     public function edit()
     {
         # check token to make sure request from User that exist in database record

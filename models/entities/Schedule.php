@@ -27,7 +27,6 @@ class Schedule extends Crud{
     private $location;
     private $description;
     private $created_at;
-    private $updated_at;
 
     /**
      * @return mixed
@@ -91,23 +90,6 @@ class Schedule extends Crud{
     public function setEvent($event)
     {
         $this->event = $event;
-    }
-
-
-    /**
-     * @param mixed $updated_at
-     */
-    public function setUpdatedAt($updated_at)
-    {
-        $this->updated_at = $updated_at;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getUpdatedAt()
-    {
-        return $this->updated_at;
     }
 
     /**
@@ -174,4 +156,4 @@ class Schedule extends Crud{
         return $this->user_id;
     }
 
-} 
+}

@@ -25,23 +25,6 @@ class Note extends Crud{
     private $label;
     private $note;
     private $created_at;
-    private $updated_at;
-
-    /**
-     * @param mixed $updated_at
-     */
-    public function setUpdatedAt($updated_at)
-    {
-        $this->updated_at = $updated_at;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getUpdatedAt()
-    {
-        return $this->updated_at;
-    }
 
     /**
      * @param mixed $created_at
@@ -139,4 +122,4 @@ class Note extends Crud{
         return $this->user_id;
     }
 
-} 
+}

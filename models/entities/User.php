@@ -27,8 +27,6 @@ class User extends Crud{
     private $about;
     private $reminder;
     private $created_at;
-    private $updated_at;
-
 
     /**
      * @param mixed $reminder
@@ -174,20 +172,4 @@ class User extends Crud{
         return $this->work;
     }
 
-    /**
-     * @param mixed $updated_at
-     */
-    public function setUpdatedAt($updated_at)
-    {
-        $this->updated_at = $updated_at;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getUpdatedAt()
-    {
-        return $this->updated_at;
-    }
-
-} 
+}
